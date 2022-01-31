@@ -1,16 +1,16 @@
-//Array to store quiz content 
+
 var questionEL = document.querySelector("#question")
 var choiceListEL = document.querySelector("#multichoice");
 var resultEl = document.querySelector("#result");
 var timerEl = document.querySelector("#time")
 var startBtnEl = document.querySelector("#startBtn")
-var countDown = 30;
+var countDown = 5;
 var clock;
 var initialEl = document.querySelector("#initial")
 var questionNum = 0;
 var scoreCard = 0;
 
-
+//Array to store quiz content 
 var multiChoice = [
     {
         question: "How many players begin a soccer game for each team?",
@@ -64,17 +64,18 @@ var multiChoice = [
     }
 
 ]
+//gets user initials at the end of the quiz and save data to local storage
 getIntial = function () {
     var userIn = prompt("Please enter initials")
     if (userIn != "" && userIn != null) {
-        document.getElementById("demo").innerHTML =
-        alert(" Player " + userIn + " Score " + scoreCard);
-        
+        document.getElementById("result").innerHTML =
+            (" Player :     " + userIn +         "     Score : " + scoreCard);
+
     } else {
         alert("Please enter your initials");
         return getIntial()
     }
-    localStorage.setItem(userIn,scoreCard);
+    localStorage.setItem(userIn, scoreCard);
 }
 
 
@@ -84,11 +85,11 @@ getIntial = function () {
 // this will end game after last questions
 var gameOver = function () {
     clearInterval(clock);
-    resultEl.textContent = "GAME OVER!";
+   resultEl.textContent = "GAME OVER!";
     getIntial()
-    
-   return;
-   
+
+    return;
+
 }
 
 //this will start the count down
@@ -104,15 +105,14 @@ var tickTock = function () {
 
 
 var askQuestions = function () {
-
-
     timerEl.textContent = countDown;
 
     if (clock = 0) {
         gameOver();
 
     }
-
+  
+   //sets timmer for quiz
     clock = setInterval(tickTock, 1000);
 
     questionEL.textContent = multiChoice[questionNum].question;
@@ -134,21 +134,20 @@ var askQuestions = function () {
     }
 
 }
-
+//this function will got to next question
 var nexQues = function () {
     questionNum++;
     if (questionNum === multiChoice.length) {
         clock = 0;
         gameOver();
-        //console.log(scoreCard);
+        
         return;
-
     }
     askQuestions()
 }
 
 
-
+//the function verifys user answers 
 var verifyAns = function (event) {
     //Pause the clock
     clearInterval(clock);
@@ -163,7 +162,7 @@ var verifyAns = function (event) {
         } else {
             resultEl.textContent = "Wrong Answer!"
             countDown = countDown - 2;
-            console.log(countDown);
+            
         }
 
     }
@@ -172,9 +171,9 @@ var verifyAns = function (event) {
 }
 
 
-//document.querySelector("#next").addEventListener("click", function (){}
 choiceListEL.addEventListener("click", verifyAns)
 
+//starts quiz using the start button
 var letsGetStarted = function () {
     document.querySelector("#startBtn").addEventListener("click", askQuestions)
 
@@ -182,6 +181,5 @@ var letsGetStarted = function () {
 
 
 letsGetStarted()
-//askQuestions()
 
 
