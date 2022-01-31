@@ -1,4 +1,5 @@
 # Code-Quiz-Challenge-4
+coding a timed quiz
 
 Purpose
 
@@ -12,7 +13,11 @@ CSS
 
 Website
 
-https://ssrr17.github.io/Challenge-2---Portfolio/
+https://ssrr17.github.io/Code-Quiz-Challenge-4/
+
+ScreenShot 
+
+
 
 Contribution
 
