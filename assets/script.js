@@ -4,7 +4,7 @@ var choiceListEL = document.querySelector("#multichoice");
 var resultEl = document.querySelector("#result");
 var timerEl = document.querySelector("#time")
 var startBtnEl = document.querySelector("#startBtn")
-var countDown = 5;
+var countDown = 30;
 var clock;
 var initialEl = document.querySelector("#initial")
 var questionNum = 0;
