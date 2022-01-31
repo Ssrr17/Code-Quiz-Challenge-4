@@ -1,13 +1,73 @@
 *{ 
  background-color: rgb(187, 121, 121);
- font-size: larger;
+ font-size: 22px;
  color:rgb(41, 57, 82); 
+ text-align: center;
  
 }
 
-main {
- 
+body{
+
+    display: block;
+}
+.highscore{
+    text-align: left;
+}
+
+.stlyetime {
+  text-align: right;  
 }
 .page-title {
 justify-content: center;
+padding: 20px 15px;
+font-size: 45px;
+}
+main div{
+    padding: 20px;
+
+}
+    
+.start{
+    padding: 20px 30px;
+    font-size: 50px;
+    color: yellow;
+    background-color: darkblue;
+    border: 5px thistle;
+    border-style: groove;
+    border-radius: 5px;
+    
+}
+
+.qcard{
+    justify-content: center;
+    border: beige 5px solid;
+    background-color: beige;
+    padding: 20px 0px 20px 0px;
+    display: flex;
+   
+    
+
+}
+.anscard {
+    justify-content: center;
+    border: beige 5px solid;
+    padding: 10px 10px 10px;
+    border-width: medium;
+    background-color: rgb(255, 251, 0);
+    color: blue;
+
+    list-style: none;
+   
+  
+  
+}
+.container{
+    justify-content: center;
+    padding: 10px;
+    list-style: none;
+    position: absolute;    
+    bottom: 0;
+    right: 400;
+     width: 400px;
+    
 }

@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/CSS/style.css">
-    <title>  Quiz </title>
+    <title> Quiz </title>
+    <div class="highscore">
+        <a href="./assets/Scores.html"> High Scores </a>
+    </div>
 </head>
+
 <body>
-    <header> 
-        <h1 class="page-title"> Code Quiz </h1>
-        <p></p>
+    <header>
+
+        <div id="time"> </div>
+        <h1 class="page-title"> ⚽️ Soccer Quiz ⚽️ </h1>
+       <!--   <p>Enter your intials below, pray and click start</p> -->
     </header>
-    
-    <main>
-        <div id="time">  </div>
 
-        <button id="startBtn"> Start </button>
+    <main class="mainclass">
 
-        <div id="question">  </div>
+        <div id="result">
 
-        <ul id="multichoice" class=""></ul> 
+          <!-- <input class="textbox" id="intial" type="text"> -->
 
-        <div id="result"> </div>
+
+        </div>
+
+
+        <button id="startBtn" class="start"> Start </button>
+
+        <div id="question"> </div>
+
+        <ul id="multichoice" class="container"></ul>
+
+
+
+
 
         <div id="score"> </div>
+        <p id="demo"></p>
 
         <script src="./assets/script.js"></script>
     </main>
 </body>
+
 </html>
